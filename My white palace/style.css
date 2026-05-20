@@ -1,0 +1,108 @@
+body{
+
+    background:black;
+
+    background-image:url("background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    font-family:Georgia;
+}
+
+h1{
+
+    font-size:70px;
+
+}p{
+
+    width:700px;
+
+    text-align:center;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+}.particles{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+}
+
+.particles::before,
+.particles::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:200%;
+
+    height:200%;
+
+    background-image:
+    radial-gradient(white 4px, transparent 4px);
+
+    background-size:60px 60px;
+
+    opacity:0.15;
+}
+
+.particles::before{
+
+    animation: moveParticles1 35s linear infinite;
+}
+
+.particles::after{
+
+    animation: moveParticles2 50s linear infinite;
+}
+
+@keyframes moveParticles1{
+
+    from{
+        transform:translate(0px,0px);
+    }
+
+    to{
+        transform:translate(-200px,-300px);
+    }
+
+}
+
+@keyframes moveParticles2{
+
+    from{
+        transform:translate(0px,0px);
+    }
+
+    to{
+        transform:translate(300px,-200px);
+    }
+
+}
